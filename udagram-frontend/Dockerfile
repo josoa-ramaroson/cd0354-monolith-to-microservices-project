@@ -9,8 +9,8 @@ RUN npm ci
 # Regroupement des sources de l'application
 COPY . ../projet3
 RUN ionic init udacity-c2-frontend
-RUN ionic build
+#RUN ionic build
 ## Exécuter
 FROM nginx:alpine
-#COPY www /usr/share/nginx/html
-COPY --from=ionic /usr/src/app/www /usr/share/nginx/html
+COPY www /usr/share/nginx/html
+#COPY --from=ionic /usr/src/app/www /usr/share/nginx/html
