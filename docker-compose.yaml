@@ -37,4 +37,8 @@ services:
   frontend:
     image: udagram-frontend:local
     ports:
+<<<<<<< HEAD
       - "8100:80"
+=======
+      - "8100:80"
+>>>>>>> master
