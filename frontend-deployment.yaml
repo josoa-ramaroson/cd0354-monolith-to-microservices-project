@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: josoa/udagram-frontend:local
+        image: josoa/udagram-frontend:v2
         ports:
         - containerPort: 80
