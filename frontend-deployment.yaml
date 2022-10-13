@@ -19,3 +19,8 @@ spec:
         image: josoa/udagram-frontend:v2
         ports:
         - containerPort: 80
+        resources:
+          limits:
+            cpu: 1000m
+          requests:
+            cpu: 500m
