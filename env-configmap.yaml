@@ -4,7 +4,7 @@ metadata:
   name: env-config-map
 data:
   # property-like keys; each key maps to a simple value
-  POSTGRES_HOST: dbjosoaprojet3.cuqoz6rzunda.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: dbprojet3.ccthpole9kl0.us-east-1.rds.amazonaws.com
   POSTGRES_DB: postgres
   AWS_BUCKET: bucketprojet3
   AWS_REGION: us-east-1

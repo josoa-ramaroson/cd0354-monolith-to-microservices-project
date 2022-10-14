@@ -5,7 +5,7 @@ metadata:
   labels:
     app: reverseproxy
 spec:
-  replicas: 2 
+  replicas: 1
   selector:
     matchLabels:
       app: reverseproxy
@@ -19,3 +19,8 @@ spec:
         image: josoa/reverseproxy
         ports:
         - containerPort: 8080
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 250m
