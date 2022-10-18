@@ -20,5 +20,17 @@ jobs:
       run: docker tag udagram-frontend:local josoa/udagram-frontend:local
     - name: authentification}
       run:   echo "171412-josoa" | docker login -u "josoa" --password-stdin
-    - name: push
+    - name: push front-end
       run: docker push josoa/udagram-frontend:local
+    - name: tag docker api-user
+      run: docker tag udagram-api-user josoa/udagram-api-user
+    - name: Push-user
+      run: docker push josoa/udagram-api-user:latest
+    - name: tag docker api-feed
+      run: docker tag reverseproxy josoa/reverseproxy
+    - name: Push-feed
+      run: docker push josoa/reverseproxy:latest
+    - name: tag docker reverse-proxy
+      run: docker tag reverseproxy josoa/reverseproxy
+    - name: Push-user
+      run: docker push josoa/reverseproxy:latest
