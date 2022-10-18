@@ -19,6 +19,6 @@ jobs:
     - name: tag docker image-front
       run: docker tag udagram-frontend:local josoa/udagram-frontend:local
     - name: authentification
-      run: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+      run:  docker login -u josoa --password-stdin 171412-josoa
     - name: push
       run: docker push josoa/udagram-frontend:local
