@@ -18,8 +18,6 @@ jobs:
       run: docker-compose -f docker-compose-build.yaml build --parallel
     - name: tag docker image-front
       run: docker tag udagram-frontend:local josoa/udagram-frontend:local
-    - name: Push
-      run: docker tag udagram-frontend:local josoa/udagram-frontend:local
     - name: authentification
       run: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
     - name: push
