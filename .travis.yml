@@ -6,7 +6,7 @@ services:
   - docker
 
 install:
-  - echo "nothing to be installed"
+  - echo "nothing here"
 
 before_script:
   - echo "no tests"
