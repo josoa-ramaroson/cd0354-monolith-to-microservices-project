@@ -18,8 +18,6 @@ jobs:
       run: docker-compose -f docker-compose-build.yaml build --parallel
     - name: tag docker image-front
       run: docker tag udagram-frontend:local josoa/udagram-frontend:local
-    - name: authentification}
-      run:   echo "171412-josoa" | docker login -u "josoa" --password-stdin
     - name: push front-end
       run: docker push josoa/udagram-frontend:local
     - name: tag docker api-user
@@ -27,9 +25,9 @@ jobs:
     - name: Push-user
       run: docker push josoa/udagram-api-user:latest
     - name: tag docker api-feed
-      run: docker tag reverseproxy josoa/reverseproxy
+      run: docker tag udagram-api-feed josoa/udagram-api-feed
     - name: Push-feed
-      run: docker push josoa/reverseproxy:latest
+      run: docker push josoa/udagram-api-feed:latest
     - name: tag docker reverse-proxy
       run: docker tag reverseproxy josoa/reverseproxy
     - name: Push-user
